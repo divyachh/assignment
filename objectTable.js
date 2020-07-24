@@ -15,7 +15,8 @@ export default class ContactController extends LightningElement {
     @track pageSize = 5; //default value we are assigning
     @track totalRecountCount = 0; //total record count received from all retrieved records
     @track totalPage = 0; //total number of page is needed to display all records
-   
+    @track conId;
+    //@track editData;
 
     connectedCallback(){
         this.getContactList();
@@ -112,9 +113,19 @@ export default class ContactController extends LightningElement {
         this.startingRecord = this.startingRecord + 1;
     }    
     handleEdit(event){
-        this.clickedButtonLabel = event.target.label;
-        
+        this.conId = event.target.name;
+        this.isOpenModal = true;
     }
-    
+    @track isOpenModal = false;
+ 
+   
+   
+    handleCloseModal() {
+        this.isOpenModal = false;
+    }
+    handleUpdate(){
+        this.isOpenModal = false;
+    }
+    }
 
 }
