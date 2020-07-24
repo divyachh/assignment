@@ -16,7 +16,7 @@ export default class ContactController extends LightningElement {
     @track totalRecountCount = 0; //total record count received from all retrieved records
     @track totalPage = 0; //total number of page is needed to display all records
     @track conId;
-    //@track editData;
+    
 
     connectedCallback(){
         this.getContactList();
