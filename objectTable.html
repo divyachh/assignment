@@ -1,0 +1,72 @@
+<template>
+  <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+    <thead>
+      <tr class="slds-line-height_reset">
+        <th class="" scope="col">
+          <div class="slds-truncate" title="First Name">First Name</div>
+        </th>
+        <th class="" scope="col">
+          <div class="slds-truncate" title="Last Name">Last Name</div>
+        </th>
+        <th class="" scope="col">
+          <div class="slds-truncate" title="Title">Title</div>
+        </th>
+        <th class="" scope="col">
+          <div class="slds-truncate" title="Phone">Phone</div>
+        </th>
+        <th class="" scope="col">
+          <div class="slds-truncate" title="Email">Email</div>
+        </th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      <template for:each={dataList} for:item="data">
+        
+      
+      <tr key={data.Id}>
+        <td>
+          <div class="slds-truncate" title="First Name">
+            {data.FirstName}
+          </div>
+        </td>
+        <td>
+          <div class="slds-truncate" title="Last Name">
+            {data.LastName}
+          </div>
+        </td>
+        <td>
+          <div class="slds-truncate" title="Title">
+            
+          </div>
+        </td>
+        <td>
+          <div class="slds-truncate" title="Phone">
+            {data.Phone}
+          </div>
+        </td>
+        <td>
+          <div class="slds-truncate" title="Email">
+            {data.Email}
+          </div>
+        </td>
+        <td>
+          <lightning-button variant="brand-outline" label="Edit" name={data.Id}
+                            onclick={handleEdit}></lightning-button>
+      </td>
+      </tr>
+    </template>
+    </tbody>
+  </table>
+ <lightning-button label="First" onclick={handleFirst} class="slds-m-left_x-small"></lightning-button>
+  <lightning-button label="Previous" onclick={handlePrevious} disabled={hidePrevious} class="slds-m-left_x-small"></lightning-button>
+  <lightning-button label="Next" onclick={handleNext} class="slds-m-left_x-small"></lightning-button>
+  <lightning-button label="Last" onclick={handleLast} class="slds-m-left_x-small"></lightning-button>
+  <lightning-combobox
+            name="20"
+            label="Show"
+            value={value}
+            placeholder="Select Progress"
+            options={options}
+            onchange={onHandleChange} ></lightning-combobox>
+  </template>
