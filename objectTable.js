@@ -13,7 +13,7 @@ export default class ContactController extends LightningElement {
     @track startingRecord = 1; //start record position per page
     @track endingRecord = 0; //end record position per page
     @track pageSize = 5; //default value we are assigning
-    @track totalRecountCount = 0; //total record count received from all retrieved records
+    @track totalRecordCount = 0; //total record count received from all retrieved records
     @track totalPage = 0; //total number of page is needed to display all records
     @track conId;
     
