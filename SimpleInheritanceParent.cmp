@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForAllPageTypes" extensible="true">
+    <aura:attribute name="description" type="String" default="Hello!!" />
+    <p>Description: {!v.description}</p>
+</aura:component>
