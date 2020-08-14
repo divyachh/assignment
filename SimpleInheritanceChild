@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForAllPageTypes" extends="c:SimpleInheritanceParent">
+    <aura:set attribute="description" value="Hello World!" />
+</aura:component>
